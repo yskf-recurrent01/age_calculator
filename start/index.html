@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>年齢計算 & 誕生日カウントダウン</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .result-card {
+      background-color: #f8f9fa;
+      border-left: 5px solid #0d6efd;
+    }
+  </style>
+</head>
+
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="text-center mb-5">JavaScript 年齢計算アプリ</h1>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <!-- 入力フォーム -->
+        <div class="card shadow-sm mb-4">
+          <div class="card-header bg-white">
+            <h5 class="mb-0">生年月日を入力</h5>
+          </div>
+          <div class="card-body">
+            <div class="row g-2 mb-3">
+              <div class="col-4">
+                <select id="year" class="form-select">
+                  <option value="" selected disabled>年</option>
+                  <!-- JSで生成 -->
+                </select>
+              </div>
+              <div class="col-4">
+                <select id="month" class="form-select">
+                  <option value="" selected disabled>月</option>
+                  <!-- JSで生成 -->
+                </select>
+              </div>
+              <div class="col-4">
+                <select id="day" class="form-select">
+                  <option value="" selected disabled>日</option>
+                  <!-- JSで生成 -->
+                </select>
+              </div>
+            </div>
+            <button id="btn-calc" class="w-100 btn btn-primary">計算する</button>
+          </div>
+        </div>
+
+        <!-- 結果表示エリア -->
+        <div class="card shadow-sm result-card">
+          <div class="card-body">
+            <h6 class="text-secondary">現在の年齢</h6>
+            <p id="result-age" class="display-6 fw-bold text-dark mb-4">-- 歳</p>
+
+            <h6 class="text-secondary">次の誕生日まで</h6>
+            <div id="result-countdown" class="h4 text-danger font-monospace">
+              --日 --時間 --分 --秒
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
